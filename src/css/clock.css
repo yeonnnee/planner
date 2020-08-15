@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Recursive:wght@600&display=swap");
+
 .clock-container {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 5%;
   font-family: "Baloo Tamma 2", cursive;
 }
 
