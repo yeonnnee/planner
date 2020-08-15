@@ -2,6 +2,7 @@
 
 @import url("./clock.css");
 @import url("./user.css");
+@import url("./background.css");
 
 * {
   box-sizing: border-box;

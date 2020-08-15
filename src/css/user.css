@@ -28,3 +28,21 @@ input::placeholder {
   font-family: "Red Rose", cursive;
   font-size: 15px;
 }
+
+.user-section {
+  float: left;
+  width: 400px;
+  height: 100vh;
+  background-color: #6a7871;
+  padding-top: 50px;
+  animation: slideOut 0.7s linear;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
