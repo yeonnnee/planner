@@ -1,6 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
-@import url("./logIn.css");
+@import url("./clock.css");
+@import url("./inputName.css");
 
 * {
   box-sizing: border-box;
