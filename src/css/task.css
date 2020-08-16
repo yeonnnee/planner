@@ -21,6 +21,7 @@
   box-shadow: 5px 5px 10px #cabdb4, inset -5px -5px 5px #cabdb4;
   padding: 0 30px;
   border: 1px solid black;
+  font-family: "Recursive", sans-serif;
 }
 
 .title {
