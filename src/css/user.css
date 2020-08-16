@@ -17,23 +17,38 @@
 .ask {
   font-size: 30px;
   font-weight: bold;
+  color: wheat;
 }
 
-input {
+.name {
   margin-top: 40px;
-  padding: 10px 20px;
+  padding: 15px 30px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid whitesmoke;
+  opacity: 0.8;
+  color: wheat;
+  font-family: "Red Rose", cursive;
+  font-size: 18px;
 }
 
-input::placeholder {
+.name:focus,
+.name:hover {
+  border: 2px solid whitesmoke;
+  opacity: 1;
+}
+
+.name::placeholder {
   font-family: "Red Rose", cursive;
-  font-size: 15px;
+  font-size: 16px;
+  color: wheat;
 }
 
 .user-section {
   float: left;
-  width: 400px;
+  width: 500px;
   height: 100vh;
-  background-color: #6a7871;
+  background-color: #592330;
   padding-top: 50px;
   animation: slideOut 0.7s linear;
 }
@@ -45,4 +60,12 @@ input::placeholder {
   100% {
     transform: translateX(0);
   }
+}
+
+.load-user {
+  box-shadow: none;
+  height: 50px;
+  width: 500px;
+  margin: 30px 0;
+  font-size: 30px;
 }
