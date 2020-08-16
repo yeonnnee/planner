@@ -1,15 +1,16 @@
 /* Load List from LS */
+
 function loadSavedList() {
   const savedPendingList = localStorage.getItem("PENDING");
   const savedFinishedList = localStorage.getItem("FINISHED");
+  const pendingList = JSON.parse(savedPendingList);
+  const finishedList = JSON.parse(savedFinishedList);
 
   if (savedPendingList !== null) {
-    const parsedPendingList = JSON.parse(savedPendingList);
-    parsedPendingList.forEach((list) => paintPendingList(list.text));
+    pendingList.forEach((list) => paintPendingList(list.text));
   }
   if (savedFinishedList !== null) {
-    const parsedFinishedList = JSON.parse(savedFinishedList);
-    parsedFinishedList.forEach((list) => paintFinished(list.text));
+    finishedList.forEach((list) => paintFinished(list.text));
   }
 }
 

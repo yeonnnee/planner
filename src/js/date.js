@@ -21,7 +21,7 @@ function commingDay() {
   const tomorrow = new Date(todayObj.today.valueOf() + 24 * 60 * 60 * 1000);
   const commingDate = tomorrow.getDate();
   const commingDay = tomorrow.getDay();
-  const commingMonth = tomorrow.getMonth();
+  const commingMonth = tomorrow.getMonth() + 1;
   const commingYear = tomorrow.getFullYear();
 
   todayObj.today = tomorrow;
@@ -35,7 +35,7 @@ function passedDay() {
   const yesterday = new Date(todayObj.today.valueOf() - 24 * 60 * 60 * 1000);
   const passedDate = yesterday.getDate();
   const passedDay = yesterday.getDay();
-  const passedMonth = yesterday.getMonth();
+  const passedMonth = yesterday.getMonth() + 1;
   const passedYear = yesterday.getFullYear();
 
   todayObj.today = yesterday;
@@ -45,14 +45,13 @@ function passedDay() {
   }. ${passedDate < 10 ? `0${passedMonth}` : passedMonth}. ${passedYear}`;
 }
 
-function getTitle() {
+function getDate() {
   const today = new Date();
   const date = today.getDate();
-  const month = today.getMonth();
+  const month = today.getMonth() + 1;
   const year = today.getFullYear();
   const day = today.getDay();
 
-  console.log(day);
   planDay.innerHTML = `${days[day]} ${month < 10 ? `0${month}` : month}. ${
     date < 10 ? `0${date}` : date
   }. ${year}`;
@@ -64,7 +63,7 @@ function getTitle() {
 }
 
 function init() {
-  getTitle();
+  getDate();
 }
 
 init();
