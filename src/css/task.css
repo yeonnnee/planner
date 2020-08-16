@@ -1,0 +1,113 @@
+.wrapper {
+  width: 65vw;
+  height: 90vh;
+  background-color: #d4c7be;
+  margin-left: 30%;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px #d4c7be, -5px -5px 3px #d4c7be;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
+  animation: loadPage 1s linear;
+}
+
+.taskInput {
+  border-radius: 30px;
+  height: 50px;
+  width: 35%;
+  outline: none;
+  margin-top: 30px;
+  box-shadow: 5px 5px 10px #cabdb4, inset -5px -5px 5px #cabdb4;
+  padding: 0 30px;
+  border: 1px solid black;
+}
+
+.title {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right {
+  margin-left: 20px;
+  padding-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.left {
+  padding-top: 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.day {
+  font-family: "Baloo Tamma 2", cursive;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.taskForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.taskInput:hover {
+  box-shadow: -5px -5px 5px #cabdb4, inset 5px 5px 5px #cabdb4;
+}
+
+.status {
+  display: flex;
+  justify-content: space-around;
+  color: rgb(32, 32, 32);
+  text-shadow: 2px 2px 2px rgb(105, 105, 105);
+}
+
+.taskList {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.pending,
+.finished {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  overflow-y: scroll;
+}
+
+span {
+  align-self: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.item {
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+.delBtn {
+  margin-left: 10px;
+}
+
+@keyframes loadPage {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
