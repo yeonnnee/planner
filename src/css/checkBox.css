@@ -1,0 +1,36 @@
+input[type="checkbox"] {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0 none;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+label {
+  height: 17px;
+  line-height: 17px;
+  padding-left: 17px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #592330;
+  background-color: transparent;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url(../images/pngfuel.com.png) no-repeat 0 0;
+  background-size: 17px 17px;
+  background-color: transparent;
+  border-color: rgb(49, 49, 49);
+}
