@@ -1,0 +1,9 @@
+.weather {
+  width: 500px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 15px;
+}
