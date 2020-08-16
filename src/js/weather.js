@@ -10,6 +10,7 @@ async function getWeather(lat, lon) {
 
   const weatherSection = document.createElement("div");
   userSection.appendChild(weatherSection);
+  weatherSection.classList.add("weather");
   weatherSection.innerHTML = `${temperature} @ ${location}`;
 }
 
@@ -38,6 +39,7 @@ function askForCoords() {
 
 function loadCoords() {
   const savedCoords = localStorage.getItem("coords");
+
   if (savedCoords === null) {
     askForCoords();
   } else {

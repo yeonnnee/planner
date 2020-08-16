@@ -3,6 +3,7 @@ const clock = document.querySelector(".clock-container");
 const form = document.querySelector(".name-container");
 const inputName = document.querySelector(".name");
 const ask = document.querySelector(".ask");
+const userSection = document.createElement("div");
 
 function saveUser() {
   const user = inputName.value;
@@ -10,7 +11,7 @@ function saveUser() {
 }
 
 function askName() {
-  inputName.addEventListener("input", saveUser);
+  form.addEventListener("submit", saveUser);
 }
 
 function loadUser() {
@@ -19,32 +20,24 @@ function loadUser() {
   if (user === null) {
     askName();
   } else {
+    // user name input 요소 없애기
     form.removeChild(inputName);
     form.removeChild(ask);
+
+    //clock, name input 없애기
     secondBody.removeChild(form);
     secondBody.removeChild(clock);
+    secondBody.appendChild(userSection);
 
-    paintUser();
+    // 새로운 section 띄우기
+    userSection.appendChild(clock);
+    userSection.appendChild(form);
+
+    // section 스타일링
+    userSection.classList.add("user-section");
+    form.classList.add("load-user");
+    form.innerHTML = `${user}'s planner`;
   }
-}
-
-function paintUser() {
-  const user = localStorage.getItem("user");
-  const userSection = document.createElement("div");
-
-  secondBody.appendChild(userSection);
-  userSection.appendChild(clock);
-  userSection.appendChild(form);
-
-  userSection.classList.add("user-section");
-
-  form.innerHTML = `${user}'s planner`;
-
-  form.style.boxShadow = "none";
-  form.style.height = "50px";
-  form.style.width = "400px";
-  form.style.margin = "30px 0";
-  form.style.fontSize = "30px";
 }
 
 function init() {
