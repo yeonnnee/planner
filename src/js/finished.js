@@ -12,6 +12,8 @@ function paintFinished(text) {
   checkBox.setAttribute("checked", true);
   label.setAttribute("for", `task-${listId}`);
   item.setAttribute("id", `${listId}`);
+  item.setAttribute("class", `item`);
+  delBtn.setAttribute("class", `delBtn`);
 
   checkBox.id = `task-${listId}`;
 
