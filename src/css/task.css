@@ -66,6 +66,7 @@
   justify-content: space-around;
   color: rgb(32, 32, 32);
   text-shadow: 2px 2px 2px rgb(105, 105, 105);
+  font-weight: bold;
 }
 
 .taskList {
@@ -87,18 +88,27 @@
 span {
   align-self: center;
   font-size: 18px;
-  font-weight: bold;
   margin-bottom: 40px;
   margin-top: 20px;
 }
 
-.item {
+li {
   margin-top: 15px;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .delBtn {
   margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: rgb(133, 7, 7);
+  opacity: 0.5;
+  cursor: pointer;
+  outline: none;
+}
+
+.delBtn:hover {
+  opacity: 1;
 }
 
 @keyframes loadPage {
