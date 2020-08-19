@@ -1,8 +1,8 @@
-.calenderCon {
+.calendarCon {
   width: 500px;
   height: 500px;
 }
-.calenderTitle {
+.calendarTitle {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -21,12 +21,6 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.calender {
-  display: grid;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(7, 1fr);
 }
 
 td {
