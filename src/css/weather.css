@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: wheat;
+  color: black;
   font-size: 15px;
+  position: relative;
+  float: right;
+  top: 0;
 }

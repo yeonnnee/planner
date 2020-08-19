@@ -9,7 +9,7 @@ async function getWeather(lat, lon) {
   const location = data.name;
 
   const weatherSection = document.createElement("div");
-  userSection.appendChild(weatherSection);
+  body.appendChild(weatherSection);
   weatherSection.classList.add("weather");
   weatherSection.innerHTML = `${temperature} @ ${location}`;
 }
