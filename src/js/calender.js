@@ -40,13 +40,16 @@ const thur = document.createElement("td");
 const fri = document.createElement("td");
 const sat = document.createElement("td");
 
-sun.innerHTML = `SUN`;
-mon.innerHTML = `MON`;
-tue.innerHTML = `TUE`;
-wed.innerHTML = `WED`;
-thur.innerHTML = `THUR`;
-fri.innerHTML = `FRI`;
-sat.innerHTML = `SAT`;
+sun.innerHTML = `Sun`;
+mon.innerHTML = `Mon`;
+tue.innerHTML = `Tue`;
+wed.innerHTML = `Wed`;
+thur.innerHTML = `Thur`;
+fri.innerHTML = `Fri`;
+sat.innerHTML = `Sat`;
+
+sun.style.color = "red";
+sat.style.color = "blue";
 
 table.appendChild(dateTr);
 dateTr.appendChild(sun);
