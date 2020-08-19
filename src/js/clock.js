@@ -7,7 +7,7 @@ function getDate() {
   const month = today.getMonth() + 1;
   const year = today.getFullYear();
   const day = today.getDay();
-  const days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   dateCon.innerHTML = `${days[day]} ${month}. ${date}. ${year}`;
 }
 
