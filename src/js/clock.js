@@ -1,13 +1,14 @@
 const dateCon = document.querySelector(".date");
 const clockCon = document.querySelector(".clock");
 
+const today = new Date();
+const date = today.getDate();
+const month = today.getMonth() + 1;
+const year = today.getFullYear();
+const day = today.getDay();
+const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
 function getDate() {
-  const today = new Date();
-  const date = today.getDate();
-  const month = today.getMonth() + 1;
-  const year = today.getFullYear();
-  const day = today.getDay();
-  const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   dateCon.innerHTML = `${days[day]} ${month}. ${date}. ${year}`;
 }
 

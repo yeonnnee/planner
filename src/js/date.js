@@ -12,7 +12,6 @@ title.appendChild(right);
 left.innerHTML = `<`;
 right.innerHTML = `>`;
 
-const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 const todayObj = {
   today: 0,
 };
@@ -46,12 +45,6 @@ function passedDay() {
 }
 
 function getDate() {
-  const today = new Date();
-  const date = today.getDate();
-  const month = today.getMonth() + 1;
-  const year = today.getFullYear();
-  const day = today.getDay();
-
   planDay.innerHTML = `${days[day]} ${month < 10 ? `0${month}` : month}. ${
     date < 10 ? `0${date}` : date
   }. ${year}`;
