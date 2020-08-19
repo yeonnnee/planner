@@ -1,4 +1,4 @@
-const calenderCon = document.createElement("div");
+const calendarCon = document.createElement("div");
 const table = document.createElement("table");
 const tr = document.createElement("tr");
 const currentYearMonth = document.createElement("td");
@@ -7,12 +7,12 @@ const nextMonth = document.createElement("td");
 const rightArrow = document.createElement("span");
 const leftArrow = document.createElement("span");
 
-userSection.appendChild(calenderCon);
+userSection.appendChild(calendarCon);
 
-table.classList.add("calenderCon");
-tr.classList.add("calenderTitle");
+table.classList.add("calendarCon");
+tr.classList.add("calendarTitle");
 
-table.setAttribute("id", "calender-table");
+table.setAttribute("id", "calendar-table");
 currentYearMonth.setAttribute("id", "currentYearMonth");
 
 rightArrow.setAttribute("id", "arrow");
@@ -21,7 +21,7 @@ leftArrow.setAttribute("id", "arrow");
 rightArrow.innerHTML = `>`;
 leftArrow.innerHTML = `<`;
 
-calenderCon.appendChild(table);
+calendarCon.appendChild(table);
 table.appendChild(tr);
 
 tr.appendChild(preMonth);

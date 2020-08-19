@@ -1,4 +1,4 @@
-const calenderObj = {
+const calendarObj = {
   today: 0,
   firstDay: 0,
   week: 0,
@@ -27,18 +27,18 @@ function getCurrentMonth() {
 
   let firstDay = firstDate.getDay();
 
-  calenderObj.today = today;
-  calenderObj.firstDay = firstDay;
-  calenderObj.lastDate = lastDate;
-  calenderObj.week = week;
+  calendarObj.today = today;
+  calendarObj.firstDay = firstDay;
+  calendarObj.lastDate = lastDate;
+  calendarObj.week = week;
 
-  console.log(calenderObj);
+  console.log(calendarObj);
   currentYearMonth.innerHTML = `${monthList[month - 1]} ${year}`;
-  buildCalender();
+  buildCalendar();
 }
 
 function getNextMonth() {
-  const next = new Date(calenderObj.today.valueOf() + 30 * 24 * 60 * 60 * 1000);
+  const next = new Date(calendarObj.today.valueOf() + 30 * 24 * 60 * 60 * 1000);
   const nextMonth = next.getMonth();
   const nextYear = next.getFullYear();
 
@@ -48,10 +48,10 @@ function getNextMonth() {
 
   let firstDayForNextMonth = firstDateForNextMonth.getDay();
 
-  calenderObj.today = next;
-  calenderObj.firstDay = firstDayForNextMonth;
-  calenderObj.lastMonth = lastDateForNextMonth;
-  calenderObj.week = weekForNextMonth;
+  calendarObj.today = next;
+  calendarObj.firstDay = firstDayForNextMonth;
+  calendarObj.lastMonth = lastDateForNextMonth;
+  calendarObj.week = weekForNextMonth;
 
   currentYearMonth.innerHTML = `${monthList[nextMonth]} ${nextYear}`;
 
@@ -59,7 +59,7 @@ function getNextMonth() {
 }
 
 function getPreMonth() {
-  const pre = new Date(calenderObj.today.valueOf() - 30 * 24 * 60 * 60 * 1000);
+  const pre = new Date(calendarObj.today.valueOf() - 30 * 24 * 60 * 60 * 1000);
   const preMonth = pre.getMonth();
   const preYear = pre.getFullYear();
 
@@ -69,13 +69,13 @@ function getPreMonth() {
 
   let firstDay = firstDateForPre.getDay();
 
-  calenderObj.today = pre;
-  calenderObj.firstDay = firstDay;
-  calenderObj.lastDate = lastDateForPre;
-  calenderObj.week = weekForPre;
+  calendarObj.today = pre;
+  calendarObj.firstDay = firstDay;
+  calendarObj.lastDate = lastDateForPre;
+  calendarObj.week = weekForPre;
 
   currentYearMonth.innerHTML = `${monthList[preMonth]} ${preYear}`;
-  table.deleteRow(calenderObj.week + 1);
+  table.deleteRow(calendarObj.week + 1);
   deleteRow();
 }
 
@@ -83,13 +83,13 @@ function deleteRow() {
   for (i = 1; i < table.rows.length + 4; i++) {
     table.deleteRow(table.rows.length - 1);
   }
-  buildCalender();
+  buildCalendar();
 }
 
-function buildCalender() {
-  let firstDayOfMonth = calenderObj.firstDay;
-  let weekOfMonth = calenderObj.week;
-  let lastDateOfMonth = calenderObj.lastDate;
+function buildCalendar() {
+  let firstDayOfMonth = calendarObj.firstDay;
+  let weekOfMonth = calendarObj.week;
+  let lastDateOfMonth = calendarObj.lastDate;
 
   let leftDays = 7;
   let setDays = 1;
