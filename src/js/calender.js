@@ -15,6 +15,9 @@ tr.classList.add("calenderTitle");
 table.setAttribute("id", "calender-table");
 currentYearMonth.setAttribute("id", "currentYearMonth");
 
+rightArrow.setAttribute("id", "arrow");
+leftArrow.setAttribute("id", "arrow");
+
 rightArrow.innerHTML = `>`;
 leftArrow.innerHTML = `<`;
 

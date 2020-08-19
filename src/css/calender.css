@@ -46,3 +46,7 @@ tr {
 #currentYearMonth {
   width: 150px;
 }
+
+#arrow {
+  margin: 0;
+}
