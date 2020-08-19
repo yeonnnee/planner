@@ -48,8 +48,8 @@ thur.innerHTML = `Thur`;
 fri.innerHTML = `Fri`;
 sat.innerHTML = `Sat`;
 
-sun.style.color = "red";
-sat.style.color = "blue";
+sun.style.color = "#c44569";
+sat.style.color = "#4a69bd";
 
 table.appendChild(dateTr);
 dateTr.appendChild(sun);
